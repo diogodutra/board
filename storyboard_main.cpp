@@ -20,7 +20,7 @@ int main(void)
 	bool error = runAllTests();
 	
     std::cout << std::boolalpha;	
-	cout << "Errors = " << (error==true) << endl;
+	cout << "Errors = " << (error == true) << endl;
 	
 	return 0;
 }

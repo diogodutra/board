@@ -11,23 +11,23 @@ void Storyboard::addNote(string title, string text, vector<string> tags)
 	this->notes.push_back(new_note);
 }
 
-bool Storyboard::deleteNote(int index)
+bool Storyboard::deleteNote(int indexNote)
 {			
 	bool error = false;
 	
-	if (this->notes.size() < index)
+	if (this->notes.size() < indexNote)
 	{
 		error = true;
 	}
 	else
 	{
-		if (this->notes.at(index).m_bDeleted)
+		if (this->notes.at(indexNote).m_bDeleted)
 		{
 			error = true;
 		}
 		else
 		{		
-			this->notes.at(index).m_bDeleted = true;
+			this->notes.at(indexNote).m_bDeleted = true;
 		}
 	}
 	
@@ -94,23 +94,38 @@ int Storyboard::searchByTags(string tag)
 	return index;
 }
 
+bool Storyboard::printNote(int indexNote)
+{
+	bool error = false;
+	
+	if (! this->notes.at(indexNote).m_bDeleted)
+	{
+		cout << "Note # " << indexNote << endl;
+		cout << "Title: " << this->notes.at(indexNote).m_sTitle << endl;
+		cout << "Text : " << this->notes.at(indexNote).m_sText  << endl;
+		cout << "Tags : ";
+		
+		for (int j=0; j<this->notes.at(indexNote).m_sTags.size(); j++)
+		{
+			cout << this->notes.at(indexNote).m_sTags.at(j) << " , ";
+		}
+		cout << endl;
+	}
+	else
+	{
+		error = true;
+	}
+	
+	return error;
+}
+
 void Storyboard::printAllNotes()
 {
 	cout << "All notes:" << endl;
 	
 	for (int i=0; i<this->notes.size(); i++)
 	{
-		if (! this->notes.at(i).m_bDeleted)
-		{
-			cout << "Note # " << i << " : " << endl;
-			cout << "Title: " << this->notes.at(i).m_sTitle << endl;
-			cout << "Text : " << this->notes.at(i).m_sText  << endl;
-			cout << "Tags : ";
-			for (int j=0; j<this->notes.at(i).m_sTags.size(); j++)
-			{
-				cout << this->notes.at(i).m_sTags.at(j) << " , ";
-			}
-			cout << endl;
-		}
+		cout << endl;
+		this->printNote(i);
 	}
 }

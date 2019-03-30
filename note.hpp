@@ -1,3 +1,6 @@
+#ifndef NOTE_H
+#define NOTE_H
+
 #include <string.h>
 #include <iostream>
 #include <vector>
@@ -12,3 +15,5 @@ public:
 	vector<string> m_sTags = {};
 	bool m_bDeleted = false;
 };
+
+#endif 
