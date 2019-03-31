@@ -43,7 +43,7 @@ bool testAddNote()
 	
 	for (int i=0; i<my_note.m_sTags.size(); i++)
 	{
-		if ((my_board.searchByTags(my_note.m_sTags.at(i))) != indexNote)
+		if ((my_board.searchByTag(my_note.m_sTags.at(i))) != indexNote)
 			error = true;
 	}
 	
@@ -71,7 +71,7 @@ bool testDelNote()
 	
 	for (int i=0; i<my_note.m_sTags.size(); i++)
 	{
-		if ((my_board.searchByTags(my_note.m_sTags.at(i))) != index)
+		if ((my_board.searchByTag(my_note.m_sTags.at(i))) != index)
 			error = true;
 	}
 	

@@ -15,11 +15,12 @@ public:
 	const int indexNotFound = -1;
 	
 	void addNote(string title, string text, vector<string> tags);
+	void addNote(Note note);
 	bool deleteNote(int indexNote);
 	
 	int searchByTitle(string title);
 	int searchByText(string text);
-	int searchByTags(string tag);
+	int searchByTag(string tag);
 	
 	bool printNote(int indexNote);
 	void printAllNotes();

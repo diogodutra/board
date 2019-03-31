@@ -1,5 +1,10 @@
 #include "storyboard.hpp"
 
+void Storyboard::addNote(Note note)
+{
+	this->notes.push_back(note);
+}
+
 void Storyboard::addNote(string title, string text, vector<string> tags)
 {	
 	Note new_note;
@@ -8,7 +13,7 @@ void Storyboard::addNote(string title, string text, vector<string> tags)
 	new_note.m_sText  = text;	
 	new_note.m_sTags  = tags;	
 	
-	this->notes.push_back(new_note);
+	this->addNote(new_note);
 }
 
 bool Storyboard::deleteNote(int indexNote)
@@ -72,7 +77,7 @@ int Storyboard::searchByText(string text)
 	return index;
 }
 
-int Storyboard::searchByTags(string tag)
+int Storyboard::searchByTag(string tag)
 {
 	int index = this->indexNotFound;
 	
