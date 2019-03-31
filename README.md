@@ -6,7 +6,9 @@ This C++ implementation provides basic features to create a storyboard with note
 
 ## Compilation
 Compile the unit test on Linux console:
+
 `g++ -o board storyboard_main.cpp note.hpp storyboard.cpp storyboard_test.cpp`
 
 Run the output on Linux console:
+
 `./board`
