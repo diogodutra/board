@@ -14,15 +14,17 @@ class Storyboard
 public:
 	const int indexNotFound = -1;
 	
-	void addNote(string title, string text, vector<string> tags);
-	void addNote(Note note);
-	bool deleteNote(int indexNote);
+	void addNote(const string title
+		, const string text
+		, const vector<string> tags);
+	void addNote(const Note note);
+	bool deleteNote(const int indexNote);
 	
-	int searchByTitle(string title);
-	int searchByText(string text);
-	int searchByTag(string tag);
+	int searchByTitle(const string title);
+	int searchByText(const string text);
+	int searchByTag(const string tag);
 	
-	bool printNote(int indexNote);
+	bool printNote(const int indexNote);
 	void printAllNotes();
 	
 private:
