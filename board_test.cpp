@@ -1,4 +1,4 @@
-#include "storyboard_test.hpp"
+#include "board_test.hpp"
 
 Note createTestNote()
 {
@@ -13,9 +13,9 @@ Note createTestNote()
 }
 
 
-Storyboard createTestStoryboard()
+Board createTestBoard()
 {
-	Storyboard my_board;
+	Board my_board;
 	
 	Note my_note = createTestNote();
 	
@@ -30,7 +30,7 @@ bool testAddNote()
 	
 	Note my_note = createTestNote();
 	
-	Storyboard my_board = createTestStoryboard();
+	Board my_board = createTestBoard();
 	
 	bool error = false;
 	
@@ -54,7 +54,7 @@ bool testDelNote()
 {
 	Note my_note = createTestNote();
 	
-	Storyboard my_board = createTestStoryboard();
+	Board my_board = createTestBoard();
 	
 	int index = my_board.indexNotFound;
 	

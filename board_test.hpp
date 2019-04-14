@@ -1,7 +1,7 @@
-#ifndef STORYBOARD_TEST_H
-#define STORYBOARD_TEST_H
+#ifndef BOARD_TEST_H
+#define BOARD_TEST_H
 
-#include "storyboard.hpp"
+#include "board.hpp"
 
 bool testAddNote();
 

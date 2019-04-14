@@ -1,11 +1,11 @@
-#include "storyboard.hpp"
+#include "board.hpp"
 
-void Storyboard::addNote(const Note note)
+void Board::addNote(const Note note)
 {
 	this->notes.push_back(note);
 }
 
-void Storyboard::addNote(const string title
+void Board::addNote(const string title
 	, const string text
 	, const vector<string> tags)
 {	
@@ -18,7 +18,7 @@ void Storyboard::addNote(const string title
 	this->addNote(new_note);
 }
 
-bool Storyboard::deleteNote(const int indexNote)
+bool Board::deleteNote(const int indexNote)
 {			
 	bool error = false;
 	
@@ -41,7 +41,7 @@ bool Storyboard::deleteNote(const int indexNote)
 	return error;
 }
 
-int Storyboard::searchByTitle(const string title)
+int Board::searchByTitle(const string title)
 {
 	int index = this->indexNotFound;
 	
@@ -60,7 +60,7 @@ int Storyboard::searchByTitle(const string title)
 	return index;
 }
 
-int Storyboard::searchByText(const string text)
+int Board::searchByText(const string text)
 {
 	int index = this->indexNotFound;
 	
@@ -79,7 +79,7 @@ int Storyboard::searchByText(const string text)
 	return index;
 }
 
-int Storyboard::searchByTag(const string tag)
+int Board::searchByTag(const string tag)
 {
 	int index = this->indexNotFound;
 	
@@ -101,7 +101,7 @@ int Storyboard::searchByTag(const string tag)
 	return index;
 }
 
-bool Storyboard::printNote(const int indexNote)
+bool Board::printNote(const int indexNote)
 {
 	bool error = false;
 	
@@ -126,7 +126,7 @@ bool Storyboard::printNote(const int indexNote)
 	return error;
 }
 
-void Storyboard::printAllNotes()
+void Board::printAllNotes()
 {
 	cout << "All notes:" << endl;
 	

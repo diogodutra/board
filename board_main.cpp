@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "storyboard_test.hpp"
-//#include "storyboard.hpp"
+#include "board_test.hpp"
+//#include "board.hpp"
 
 bool runAllTests()
 {

@@ -1,5 +1,5 @@
-#ifndef STORYBOARD_H
-#define STORYBOARD_H
+#ifndef BOARD_H
+#define BOARD_H
 
 #include <stdio.h>
 #include <string.h>
@@ -9,7 +9,7 @@
 
 using namespace std;
  
-class Storyboard
+class Board
 {
 public:
 	const int indexNotFound = -1;
